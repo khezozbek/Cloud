@@ -1,0 +1,131 @@
+/* CSS for cloud_detail.html */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* File Upload Form */
+  .upload-form {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .upload-form input[type="file"] {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  .upload-form input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* File List */
+  .file-list {
+    margin-bottom: 20px;
+  }
+  
+  .file-list h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .file-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .file-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .file-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .file-list span {
+    flex-grow: 1;
+    color: #333;
+  }
+  
+  .file-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .file-list a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .file-list a.download-link {
+    color: #4CAF50;
+    background-color: #e8f5e9;
+  }
+  
+  .file-list a.delete-link {
+    color: #F44336;
+    background-color: #ffebee;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .file-list li {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+    }
+  
+    .file-list a {
+      display: block;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  

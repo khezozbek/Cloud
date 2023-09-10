@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <title>Create Cloud File</title>
+      <link rel="stylesheet" href="create_cloud.css">
+      <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cloud File </h1>
+    <button onclick="goMain()" class="logout-button">Main page</button></a>
+    <hr>
+      <h1 class="h11">Create Cloud File</h1>
+      <p class="qw">!Max cloud size is 5GB</p>
+      <form method="POST">
+        <label for="filename">Cloud Name:</label>
+        <input type="text" id="filename" name="filename" required><br><br>
+    
+        <label for="purpose">Purpose:</label>
+        <select id="purpose" name="purpose">
+          <option value="education">Education</option>
+          <option value="personal">Own</option>
+          <option value="code">Code</option>
+        </select><br><br>
+    
+        <input type="submit" value="Create">
+      </form>
+      <script src="app.js"></script>
+</body>
+</html>

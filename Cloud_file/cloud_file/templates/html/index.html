@@ -1,0 +1,34 @@
+{% extends 'html/base.html' %}
+
+{% block title %}Cloud File{% endblock %}
+
+{% block content %}
+    <h1>Cloud File</h1>
+        {% if user.is_authenticated %}
+            <p>Welcome, {{ user.username }}!</p>
+            <a href="{% url 'logout' %}"><button class="logout-button">log out</button></a>
+        {% else %}
+            <p>Please log in to access your cloud files.</p>
+            <a href="{% url 'login' %}"><button class="logout-button">Login</button></a>
+        {% endif %}
+    <hr>
+    <div>
+        <button onclick="createCloud()" class="download-button">New Cloud</button>
+    </div>
+    <ol>
+        {% for server in servers %}
+        <li>
+            <span ondblclick="" class="cloud-name">
+                <a href="{% url 'cloud_detail' server_id=server.pk %}">{{ server.name }}</a>
+                <div class="server-actions">
+                    <form method="POST" action="{% url 'delete_server' server.id %}" onsubmit="return confirm('Are you sure you want to delete this server and its files?')">
+                        {% csrf_token %}
+                        <button type="submit" class="download-button">Delete Server</button>
+                    </form>
+                </div>
+            </span>
+        </li>
+        {% endfor %}
+        <!-- Add the remaining cloud names here -->
+    </ol>
+{% endblock %}

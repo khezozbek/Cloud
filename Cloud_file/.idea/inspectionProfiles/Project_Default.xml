@@ -1,0 +1,25 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="main.tracker" />
+          <option value="main.lp" />
+          <option value="Environs" />
+          <option value="jsons.sentences" />
+          <option value="src.roboticsacademy.libs.admin.import_export" />
+          <option value="diary.diary.urls.custom_backend" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

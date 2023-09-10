@@ -1,0 +1,24 @@
+{% extends 'html/base.html' %}
+
+{% block title %}File Transfer{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>File Transfer</h1>
+        <p>File ID: {{ file.id }}</p>
+        <p>Name: {{ file.name }}</p>
+
+        <hr>
+
+        {% if error_message %}
+            <p class="error">{{ error_message }}</p>
+        {% endif %}
+
+        <h2>Transfer the File</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Transfer File</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Cloud file {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'clouad_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'create_cloud.css' %}">
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+
+    <script src="{% static 'app.js' %}"></script>
+</body>
+</html>

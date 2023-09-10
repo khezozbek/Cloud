@@ -1,0 +1,25 @@
+{% extends 'html/base.html' %}
+
+{% block title %}Create Cloud File{% endblock %}
+
+{% block content %}
+    <h1>Cloud File</h1>
+    <button onclick="goMain()" class="logout-button">Main page</button>
+    <hr>
+    <h1 class="h11">Create Cloud File</h1>
+    <p class="qw">Max cloud size is 5GB</p>
+    <form method="POST" action="{% url 'create_cloud' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="filename">Cloud Name:</label>
+        <input type="text" id="filename" name="name" required><br><br>
+
+        <label for="purpose">Purpose:</label>
+        <select id="purpose" name="type">
+            <option value="Education">Education</option>
+            <option value="Personal">Personal</option>
+            <option value="Code">Code</option>
+        </select><br><br>
+
+        <input type="submit" value="Create">
+    </form>
+{% endblock %}
